@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.lenovo.bookstore.list.MainActivity">
+
+
+    <GridView
+        android:id="@+id/book_grid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:columnWidth="100dp"
+        android:numColumns="auto_fit"
+        android:layout_alignParentBottom="true"
+        android:stretchMode="columnWidth"
+        android:gravity="center"
+        android:background="#c0c0c0"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/sort_radioGroup" />
+
+
+    <RadioGroup
+        android:id="@+id/sort_radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/search"
+        android:checkedButton="@+id/title"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:id="@+id/sort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/search"
+            android:layout_weight="1"
+            android:paddingTop="12dp"
+            android:text="Sort By :" />
+
+        <RadioButton
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="#000000"
+            android:onClick="radioSortTitle"
+            android:focusable="false"
+            android:text="@string/radio_title" />
+
+        <RadioButton
+            android:id="@+id/publish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="#000000"
+            android:onClick="radioSortYear"
+            android:focusable="false"
+            android:text="@string/radio_pub" />
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="#ffffff"
+        android:background="#000000"
+        android:hint="@string/placeholder"
+        android:textColorHint="#c0c0c0c0"
+        />
+
+
+    <!--<ListView-->
+    <!--android:id="@+id/list_books"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"></ListView>-->
+
+
+
+</RelativeLayout>
